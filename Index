@@ -1,0 +1,40 @@
+<html>
+    <body style="background-color:#7070f0;">
+  <p style="font-family:courier;">Good evening Tulika!  
+
+<form action=""method="post" style="font-family:courier;">
+Ready to get language for your Daily 5 Minute language speaking practice? (Y for yes, N for no) <input type="text" name="ready">
+<br>
+
+<input type="submit" name="submit">
+</form>
+</p>
+<?php
+$ready=$_POST['ready']; 
+if(!empty($ready)){
+  $subject = ["What am I grateful for today?", "What is my main intention today?", "What three main tasks do I need to do today?", "What am I feeling this morning?", "What is one thing I can do today that scares me?", "What would the person I want to become do today?", "What new thing did I learn yesterday?"];
+  $lista = ["Suomi", "Mandarin", "Francais", "Hindi"];
+  $y = rand (0,6);
+  $x = rand(0,3);
+  echo "<br>";
+    if($ready=="Y"){
+      echo "Today you should practice: ";
+      echo $lista[$x];
+      echo "; and talk about: ";
+      echo $subject[$y];
+      }
+    if ($ready=="N") {
+      echo "Ok, get some rest";
+      }
+}
+
+
+
+?> 
+<br>
+<img src="https://images.pexels.com/photos/725255/pexels-photo-725255.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Photo by Nina Uhlíková from Pexels" width="500" height="500">
+Image credits: Photo by Nina Uhlíková from Pexels
+
+
+  </body>
+</html>
